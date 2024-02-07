@@ -5,7 +5,7 @@
    <div class="container">
 
     <!--form-->
-        <form class="form" action="{{route('admin.project.store', $project)}}" method="POST">
+        <form class="form" action="{{route('admin.project.update', $project)}}" method="POST">
         <h1 class="text-center">Aggiungi un nuovo progetto</h1>    
         @csrf
         @method('PUT')

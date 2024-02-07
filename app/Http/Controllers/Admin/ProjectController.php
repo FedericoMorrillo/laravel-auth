@@ -32,13 +32,6 @@ class ProjectController extends Controller
      */
     public function store(StoreProjectRequest $request)
     {
-        //validazione
-        $request->validate(
-            [
-                'title' => 'required|max:50|min:5',
-                'description' => 'required|max:100|min:4',
-            ]
-        );
 
         //dati da salvare
         $data = $request->all();
@@ -79,13 +72,6 @@ class ProjectController extends Controller
      */
     public function update(UpdateProjectRequest $request, Project $project)
     {
-        //validazione
-        $request->validate(
-            [
-                'title' => 'required|max:50|min:5',
-                'description' => 'required|max:100|min:4',
-            ]
-        );
 
         //dati da salvare
         $data = $request->all();
@@ -105,13 +91,13 @@ class ProjectController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Project $id)
+    public function destroy($id)
     {
-        $project = Project::find($id);
+        $project = Project::findOrFail($id);
         //metodo per eliminare 
         $project->delete();
 
         //reindiriziamo alla pagina principale
-        return redirect()->route('comics.index');
+        return redirect()->route('admin.project.index');
     }
 }
