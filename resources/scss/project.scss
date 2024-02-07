@@ -1,0 +1,27 @@
+.card {
+    width: 25rem;
+    padding: .625rem;
+    margin: .625rem;
+    background-color: rgb(127, 173, 224);
+    border: 1px solid black;
+
+    .row {
+        padding-bottom: .625rem;
+        border-bottom: 1px solid black;
+
+
+    }
+}
+
+.create-btn {
+    margin-left: .625rem;
+    border: 1px solid black;
+    border-radius: .625rem;
+    background-color: rgb(127, 173, 224);
+
+    a {
+        padding: .625rem;
+        font-style: none;
+        color: black;
+    }
+}
