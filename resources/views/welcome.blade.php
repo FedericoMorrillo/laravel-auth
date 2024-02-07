@@ -1,19 +1,39 @@
 @extends('layouts.app')
 @section('content')
 
-<div class="jumbotron p-5 mb-4 bg-light rounded-3">
-    <div class="container py-5">
-        
-        <h1 class="display-5 fw-bold">
-            Welcome to my Portfolio
-        </h1>
+<div class=" text-white">
+    <!--jumbo-->
+    <div class="jumbotron p-2 mb-4">
+        <div class="container pt-5">
+            <h5>
+                Hi! my name is
+            </h5>
+            <h1 class=" fw-bold">
+                Federico Morrillo
+            </h1>
+            <h3>A full-Stack Web Developer</h3>
+        </div>
+
+        <!--paragrafo-->
+        <div class="container">
+            <p class="font-home">Im a Boolean student and i want to share with you my progress in this huge world made of
+                code step by step showing all the milestones achieved day by day working on my projects.
+            </p>
+            <!--/paragrafo-->
+        </div>
 
     </div>
-</div>
+    <!--/jumbo-->
 
-<div class="content">
+    <!--sezione talk about-->
     <div class="container">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora temporibus, dicta nemo aliquam totam nisi deserunt soluta quas voluptatum ab beatae praesentium necessitatibus minus, facilis illum rerum officiis accusamus dolores!</p>
+        <h4 class="pb-3">About me</h4>
+        <p class="font-home">I am an Italian with a lot of desire to learn. Before entering this world i have done several different jobs, from 
+            kitchen to industrial laundry. an entertainer and referee for sports events such as airsoft and LARP.
+        </p>
     </div>
+    <!--/sezione talk about-->
+
 </div>
+
 @endsection

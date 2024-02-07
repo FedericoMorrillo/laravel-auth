@@ -17,7 +17,9 @@
     }
 
     main {
+        margin-top: 1.25rem;
         padding-left: 0 !important;
+        width: 80%;
 
     }
 }
@@ -26,4 +28,8 @@
     background-image: url('../img/bg.PNG');
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.home-bg {
+    background-color: rgb(4, 11, 44);
 }

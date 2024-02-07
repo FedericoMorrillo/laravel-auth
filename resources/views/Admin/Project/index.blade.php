@@ -2,7 +2,7 @@
 @extends('layouts.admin')
 
 @section('content')
-<div class="fm-container">
+<div class="fm-container bg-card">
 
     <h6 class="text-white bg-black">Progetti:</h6>
     <div class="box d-flex flex-wrap scroll">
