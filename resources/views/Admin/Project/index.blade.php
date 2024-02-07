@@ -8,23 +8,21 @@
 <div class="card">
 
     <!--nome progetto-->
-    <div class="row">
-        <div>
-            <strong class="me-1">Nome del Progetto: </strong>   
+    <div class="row d-flex justify-content-between">
+        <div class="d-flex">
+            <div>
+                <strong class="me-2">Nome del Progetto: </strong>   
+            </div>
+            <div>
+                <h5>{{$project->title}}</h5>  
+            </div>
         </div>
-        <div>
-            <strong>{{$project->title}}</strong>  
-        </div>
+        <button class="btn">
+            <a href="{{route('admin.project.show', $project)}}">mostra</a>
+        </button>
         
     </div>
     <!--/nome progetto-->
-
-    <!--descrizione progetto-->
-    <div class="row">
-        <strong class="me-1">Descrizione: </strong> 
-        <div>{{$project->description}}</div>
-    </div>
-    <!--/descrizione progetto-->
 
     <!--linguaggio e ultimo commit-->
     <div class=" d-flex justify-content-between">
@@ -45,7 +43,7 @@
 @endforeach
 
 <!--aggiungere progetto-->
-<button class="create-btn">
+<button class="btn">
     <a href="{{route('admin.project.create')}}"> Aggiungi progetto</a>
 </button>
 

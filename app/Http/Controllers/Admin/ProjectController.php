@@ -32,15 +32,37 @@ class ProjectController extends Controller
      */
     public function store(StoreProjectRequest $request)
     {
-        //
+        //validazione
+        $request->validate(
+            [
+                'title' => 'required|max:50|min:5',
+                'description' => 'required|max:100|min:4',
+            ]
+        );
+
+        //dati da salvare
+        $data = $request->all();
+
+        $project = new Project();
+        $project->title = $data['title'];
+        $project->description = $data['description'];
+        $project->code = $data['code'];
+        $project->last_commit = $data['last_commit'];
+
+        //salviamo i dati
+        $project->save();
+        //reindiriziamo alla pagina principale
+        return redirect()->route('admin.project.index');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Project $project)
+    public function show(string $id)
     {
-        //
+        //tramite id mostriamo la pagina show.blade.php con i dati del progetto tramite id
+        $project = Project::find($id);
+        return view('admin.project.show', compact('project'));
     }
 
     /**
