@@ -24,11 +24,11 @@
 </head>
 
 <body>
-    <div id="app">
+    <div id="app" class="app-admin-dash app-bg">
 
-        <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-2 shadow">
+        <header class="navbar navbar-dark sticky-top bg-header flex-md-nowrap p-2 shadow">
             <div class="row justify-content-between">
-                <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="/">BoolPress</a>
+                <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="/">Homepage</a>
                 <button class="navbar-toggler position-absolute d-md-none collapsed" type="button"
                     data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -54,7 +54,7 @@
                 <!-- Definire solo parte del menu di navigazione inizialmente per poi
         aggiungere i link necessari giorno per giorno
         -->
-                <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark navbar-dark sidebar collapse">
+                <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-menu navbar-dark sidebar collapse">
                     <div class="position-sticky pt-3">
                         <ul class="nav flex-column">
                             <li class="nav-item">
@@ -66,7 +66,7 @@
                             <li class="nav-item d-flex">
                                 <a class="nav-link text-white"
                                     href="{{ route('admin.project.index') }}">
-                                    <i class="fa-solid fa-tachometer-alt fa-lg fa-fw"></i> Projects
+                                    <i class="fa-regular fa-file-lines fa-lg me-2 ps-1"></i> Projects
                                 </a>
                             </li>
                         </ul>
@@ -75,7 +75,7 @@
                     </div>
                 </nav>
 
-                <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <main class=" col-md-9 ms-sm-auto col-lg-10 px-md-4">
                     @yield('content')
                 </main>
             </div>

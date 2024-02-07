@@ -1,0 +1,29 @@
+//classe che utilizzo come scope
+.app-admin-dash {
+
+
+    #sidebarMenu {
+        margin-top: 2.5rem;
+        height: 80%;
+        border: 4px solid white;
+        border-radius: .625rem;
+    }
+
+    .card {
+        background-color: rgba(0, 0, 155, 0.671);
+        border: 4px solid white;
+        border-radius: .625rem;
+        color: white;
+    }
+
+    main {
+        padding-left: 0 !important;
+
+    }
+}
+
+.app-bg {
+    background-image: url('../img/bg.PNG');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
