@@ -5,7 +5,7 @@
 @foreach ($projects as $project)
 
     <!--card-->
-<div class="card">
+<div class="fm-card">
 
     <!--nome progetto-->
     <div class="row d-flex justify-content-between">
@@ -17,10 +17,12 @@
                 <h5>{{$project->title}}</h5>  
             </div>
         </div>
-        <button class="btn">
-            <a href="{{route('admin.project.show', $project)}}">mostra</a>
+        <button class="fm-btn">
+            <a href="{{route('admin.project.show', $project)}}">Mostra</a>
         </button>
-        
+        <button class="fm-btn me-2">
+            <a href="{{route('admin.project.edit', $project)}}">Modifica</a>
+        </button>
     </div>
     <!--/nome progetto-->
 
@@ -34,8 +36,18 @@
             <strong class="me-1">Ultimo commit</strong>
             <div>{{$project->last_commit}}</div>
         </div>
-        
     </div>
+    <!--destroy-->
+    <form class="d-flex justify-content-center" action="{{route('admin.project.destroy', $project->id)}}" method="POST">
+        @csrf
+
+        <!--richiamiamo il metodo-->
+        @method('DELETE')
+        <button class="fm-btn">
+            Elimina
+        </button>
+    </form>
+<!--/destroy-->
     <!--/linguaggio e ultimo commit-->
 </div>
 <!--/card-->
@@ -43,7 +55,7 @@
 @endforeach
 
 <!--aggiungere progetto-->
-<button class="btn">
+<button class="fm-btn">
     <a href="{{route('admin.project.create')}}"> Aggiungi progetto</a>
 </button>
 

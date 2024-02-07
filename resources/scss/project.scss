@@ -1,4 +1,4 @@
-.card {
+.fm-card {
     width: 25rem;
     padding: .625rem;
     margin: .625rem;
@@ -9,13 +9,13 @@
         padding-bottom: .625rem;
         border-bottom: 1px solid black;
 
-        .btn {
-            width: 7.5rem;
+        .fm-btn {
+            width: 6.875rem;
         }
     }
 }
 
-.btn {
+.fm-btn {
     margin-left: .625rem;
     border: 1px solid black;
     border-radius: .625rem;

@@ -70,7 +70,8 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        //
+        // mostriamo la pagina edit.blade.php 
+        return view('admin.project.edit', compact('project'));
     }
 
     /**
@@ -78,14 +79,39 @@ class ProjectController extends Controller
      */
     public function update(UpdateProjectRequest $request, Project $project)
     {
-        //
+        //validazione
+        $request->validate(
+            [
+                'title' => 'required|max:50|min:5',
+                'description' => 'required|max:100|min:4',
+            ]
+        );
+
+        //dati da salvare
+        $data = $request->all();
+
+        $project->title = $data['title'];
+        $project->description = $data['description'];
+        $project->code = $data['code'];
+        $project->last_commit = $data['last_commit'];
+
+        //salviamo i dati
+        $project->save();
+        //reindiriziamo alla pagina principale
+        return redirect()->route('admin.project.index');
     }
+
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Project $project)
+    public function destroy(Project $id)
     {
-        //
+        $project = Project::find($id);
+        //metodo per eliminare 
+        $project->delete();
+
+        //reindiriziamo alla pagina principale
+        return redirect()->route('comics.index');
     }
 }

@@ -33,7 +33,7 @@
     
 </div>
 <!--/linguaggio e ultimo commit-->
-<button class="mt-5 btn">
+<button class="mt-5 fm-btn">
 <a href="{{route('admin.project.index')}}">Torna ai progetti</a>
 </button>
 @endsection
